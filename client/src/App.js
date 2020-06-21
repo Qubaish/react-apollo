@@ -4,6 +4,7 @@ import { ApolloProvider } from '@apollo/react-hooks';
 import { ApolloClient } from 'apollo-client';
 import { HttpLink } from 'apollo-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
+import AddContact from './AddContact';
 import './App.css';
 
 const link = new HttpLink({uri: "http://localhost:4000/graphql"});
@@ -18,6 +19,7 @@ function App() {
     <ApolloProvider client={client}>
     <div className="App">
       <h2>CRM</h2>
+      <AddContact />
       <Contacts />
     </div>
     </ApolloProvider>
